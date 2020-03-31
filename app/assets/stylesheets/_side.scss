@@ -1,0 +1,56 @@
+.side{
+  width: 300px;
+  float:left;
+
+  &__header {
+    background-color: #253141 ;
+    height: 100px;
+    display: flex;
+
+    .side__box {
+      background-color: #253141;
+      margin: auto;
+      width: 260px;
+      align-items: center;
+      display: flex;
+
+      &__name {
+        color: #ffffff;
+        margin: 0;
+        padding: 0;
+        font-weight: bold;
+      }
+    }
+    .side__box__icon {
+      margin-left: auto;
+      display: flex;
+      justify-content: space-between;
+      
+      &-new__btn {
+        color:#ffffff;
+        margin-right: 5px;
+      }
+
+      &-sett__btn {
+        color: #ffffff;
+      }
+    }
+  }
+  .side__group {
+    background-color: #2f3e51;
+    height: calc(100vh - 100px);
+    color: #ffffff;
+    font-weight: bold;
+    padding: 20px 20px 0;
+
+    &__name {
+      font-size: 15px;
+      margin: 0px 0px 5px;
+    }
+
+    &__message {
+      font-size: 11px;
+      padding-bottom: 40px;
+    }
+  }
+}
