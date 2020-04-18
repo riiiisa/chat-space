@@ -41,19 +41,22 @@
     height: calc(100vh - 100px);
     font-weight: bold;
     padding: 20px 20px 0;
+
     .group {
       
-        &__name {
-          font-size: 15px;
-          margin: 0px 0px 5px;
-          color: #ffffff;
-        }
+      &__name {
+        font-size: 15px;
+        margin: 0px 0px 5px;
+        color: #ffffff;
+        text-decoration: none;
+      }
 
-        &__message {
-          font-size: 11px;
-          padding-bottom: 40px;
-          color: #ffffff;
-        }
+      &__message {
+        font-size: 11px;
+        padding-bottom: 40px;
+        color: #ffffff;
+        text-decoration: none;
+      }
     }
   }
 }

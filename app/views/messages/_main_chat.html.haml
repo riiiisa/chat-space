@@ -2,25 +2,23 @@
   .main__header
     .main__header__left
       .main__header__groupname
-        test
+        = @group.name
       .main__header__member
-        Member : risa 
-    .main__header__right
-      = link_to 'edit' , destroy_user_session_path, method: :delete
+        Member:
+        %ul
+          - @group.users.each do |user|
+            = user.name 
+    = link_to edit_group_path(@group) do
+      .edit-btn Edit
   .main__message
-    .main__message__user
-      .main__message__user__name
-        masa
-      .main__message__user__day
-        2019/11/20(web) 17:43:01
-    .main__message__content
-      おはよう！
+    = render @messages
     
   .main__form
-    %form.new_message
-      .input-box
-        %input{type: "text", class:"input-box__text", placeholder:"type a message"}
-        %label{class: "input-box__image"}
-          =icon('fa', 'image')
-          %input{type:"file", class: "input-box__image__file" }
-      %input{type: "submit", class: "submit-btn",  value:"send"}
+    .input-box
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'input-box', placeholder: 'type a message'
+        .input__text
+          = f.label :image, class: 'image-label'do
+            = icon('fa', 'image', class: 'icon')
+            = f.file_field :image, class: 'image-input'
+        = f.submit 'Send', class: 'submit-btn'
