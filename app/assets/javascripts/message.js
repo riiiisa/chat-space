@@ -60,7 +60,7 @@ $(document).on('turbolinks:load', function(){
 
     .fail(function(message) {
       alert("メッセージ送信に失敗しました");
-    });
+    })
 
     .always(function(message){
       $('.submit-btn').prop('disabled', false);
