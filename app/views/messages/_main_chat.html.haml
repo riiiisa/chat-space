@@ -16,7 +16,7 @@
   .main__form
     .input-box
       = form_for [@group, @message] do |f|
-        = f.text_field :content, class: 'input-box', placeholder: 'type a message'
+        = f.text_field :content, class: 'input-text', placeholder: 'type a message'
         .input__text
           = f.label :image, class: 'image-label'do
             = icon('fa', 'image', class: 'icon')
