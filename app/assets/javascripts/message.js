@@ -1,5 +1,5 @@
 $(function(){
-  console.log(1)
+
     function buildHTML(message){
       if ( message.image ) {
           var html =
@@ -43,7 +43,6 @@ $(function(){
   
 
     $('#new_message').on('submit', function(e){
-      // console.log(1)
       e.preventDefault();
       var formData = new FormData(this);
       var url = $(this).attr('action');
@@ -56,7 +55,6 @@ $(function(){
         contentType: false
       })
       .done(function(data){
-        console.log(seikou) 
         var html = buildHTML(data);
         $('.messages').append(html);
         $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
@@ -73,7 +71,6 @@ $(function(){
     });
     
     var reloadMessages = function() {
-      // console.log(1)
       var last_message_id = $('.message:last').data("message-id");
       $.ajax({
         url: "api/messages",
@@ -82,12 +79,9 @@ $(function(){
         data: {id: last_message_id}
       })
       .done(function(messages) {
-        console.log(1)
         if (messages.length !== 0) {
           var insertHTML = '';
-          console.log(1)
           $.each(messages, function(i, message) {
-            // console.log(1)
             insertHTML += buildHTML(message)
           });
           $('.messages').append(insertHTML);
@@ -95,13 +89,10 @@ $(function(){
         }
       })
       .fail(function() {
-        // console.log(1)
         alert('error');
       });
     };
-    // console.log(1)
     if (document.location.href.match(/\/groups\/\d+\/messages/)) {
       setInterval(reloadMessages, 7000);
-      // console.log(1)
     };
 });
