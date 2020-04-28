@@ -65,5 +65,10 @@ group :test, :development do
   gem 'capybara'
 end
 
+group :production do
+  gem 'unicorn-rails'
+end
+
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 
