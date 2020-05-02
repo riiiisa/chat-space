@@ -45,6 +45,11 @@ group :development, :test do
   gem 'faker'
   gem 'remotipart', '~> 1.0'
   gem 'pry-rails'
+  gem 'capistrano'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano3-unicorn'
 end
 
 gem 'font-awesome-sass'
