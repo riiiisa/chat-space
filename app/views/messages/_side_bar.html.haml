@@ -10,10 +10,10 @@
         .side__box__icon-edit
         = link_to edit_user_path(current_user), class:"side__box__icon-sett__btn" do
           = icon('fa', 'cog')
-  .side__group
+  .side__groups
     - current_user.groups.each do |group|
-      .group
-        =link_to group_messages_path(group) do
+      .groups
+        =link_to group_messages_path(group) , class:"group" do
           .group__name
             = group.name
           .group__message

@@ -31,8 +31,8 @@ $(function(){
                 ${message.created_at}
               </div>
             </div>
-            <div class="contente">
-              <p class="image">
+            <div class="content">
+              <p class="content">
                 ${message.content}
               </p>
             </div>

@@ -1,6 +1,5 @@
 .main{
   width: calc(100vw - 300px);
-  // height: 100%;
   margin-left:auto;
 
   &__header {
@@ -31,15 +30,17 @@
       }
     }
 
-    .edit-btn {
-      height: 40px;
-      line-height: 40px;
-      color: #38aef0;
-      font-size: 16px;
-      padding: 0 20px;
-      border: solid 1px #38aef0;
-      margin-top: 28px;
-
+    .edit{
+      text-decoration: none;
+      .edit-btn {
+        height: 40px;
+        line-height: 40px;
+        color: #38aef0;
+        font-size: 16px;
+        padding: 0 20px;
+        border: solid 1px #38aef0;
+        margin-top: 28px;
+      }
     }
   }
 
@@ -64,38 +65,38 @@
       }
 
       .content {
-        padding-bottom: 46px;
         color: #434A54;
         font-size: 14px;
+        padding-bottom: 46px;
       }
     }
   }
+
   &__form {
     background-color: #d2d2d2;
     height: 90px;
     padding: 20px 40px ;
     .new_message{
+      position: relative;
       display: flex;
-      input{
-        font-family: inherit;
-        font-size: inherit;
-        font-weight: inherit;
+      padding: 0 40px 0 10px;
+      .input-text{
+        width: 100%
+        // font-family: inherit;
+        // font-size: inherit;
+        // font-weight: inherit;
       }
-      .input-box{
-        width: 100%;
-        padding: 0 40px 0 10px;
-      }
-
+      
       .input__text{
-        height: 50px;
-        position: relative;
-        border-style: none;
-        position: relative;
+        // width: 100vw;
+        // height: 50px;
+        // border-style: none;
+        // position: relative;
         
         .image-label {
           position: absolute;
-          right: 10px;
-          top: 10px;
+          right: 180px;
+          top: 15px;
           cursor: pointer;
         }
         .image-input{
@@ -114,5 +115,3 @@
     }
   }
 }
-
-

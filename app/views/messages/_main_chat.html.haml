@@ -8,17 +8,16 @@
         %ul
           - @group.users.each do |user|
             = user.name 
-    = link_to edit_group_path(@group) do
+    = link_to edit_group_path(@group) , class:"edit" do
       .edit-btn Edit
   .messages
     = render @messages
     
   .main__form
-    .input-box
-      = form_for [@group, @message] do |f|
-        = f.text_field :content, class: 'input-text', placeholder: 'type a message'
-        .input__text
-          = f.label :image, class: 'image-label'do
-            = icon('fa', 'image', class: 'icon')
-            = f.file_field :image, class: 'image-input'
-        = f.submit 'Send', class: 'submit-btn'
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'input-text', placeholder: 'type a message'
+      .input__text
+        = f.label :image, class: 'image-label'do
+          = icon('fa', 'image', class: 'icon')
+          = f.file_field :image, class: 'image-input'
+      = f.submit 'Send', class: 'submit-btn'
